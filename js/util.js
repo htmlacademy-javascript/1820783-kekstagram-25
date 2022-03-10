@@ -9,8 +9,6 @@ const getRandomIntInclusive = function (min, max) {
   return (Math.floor(Math.random() * (max - min + 1)) + min);
 };
 
-getRandomIntInclusive(0, 6);
-
 const checkLength = function (inputText, maxLength) {
   return inputText.length <= maxLength;
 };

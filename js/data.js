@@ -9,12 +9,15 @@ const USER_NAMES = ['Денис', 'Максим', 'Юлия', 'Андрей', '�
 const MIN_LIKES = 15;
 const MAX_LIKES = 200;
 
+const MIN_NUMBER = 1;
+const MAX_NUMBER = 6;
+
 const SIMILAR_COMMENT_COUNT = 5;
 const SIMILAR_PHOTOS_COUNT = 25;
 
 const createComment = (id) => ({
   id: id+1,
-  avatar: `img/avatar-${  getRandomIntInclusive(1, 6)  }.svg`,
+  avatar: `img/avatar-${  getRandomIntInclusive(MIN_NUMBER, MAX_NUMBER)  }.svg`,
   message: getRandomArrayElement(MESSAGES),
   userName: getRandomArrayElement(USER_NAMES)
 });
@@ -27,6 +30,6 @@ const createDescriptionPhoto = (id) => ({
   comments: Array.from({length: SIMILAR_COMMENT_COUNT}, (_, i) => createComment(i))
 });
 
-const descriptionPhotos = () => Array.from({length: SIMILAR_PHOTOS_COUNT}, (_, i) => createDescriptionPhoto(i));
+const descriptionPhotos = Array.from({length: SIMILAR_PHOTOS_COUNT}, (_, i) => createDescriptionPhoto(i));
 
 export {descriptionPhotos};

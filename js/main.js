@@ -1,3 +1,3 @@
-import {descriptionPhotos} from './create-description-photo.js';
+import {descriptionPhotos} from './data.js';
 
-window.console.log(descriptionPhotos());
+window.console.log(descriptionPhotos);
