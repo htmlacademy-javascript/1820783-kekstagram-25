@@ -24,12 +24,12 @@ const createComment = (id) => ({
 
 const createDescriptionPhoto = (id) => ({
   id: id+1,
-  url: `photos/${String(id+1).padStart(2, '0')}.jpg`,
+  url: `photos/${String(id+1)}.jpg`,
   description: getRandomArrayElement(DESCRIPTIONS),
   likes: getRandomIntInclusive(MIN_LIKES, MAX_LIKES),
   comments: Array.from({length: SIMILAR_COMMENT_COUNT}, (_, i) => createComment(i))
 });
 
-const descriptionPhotos = Array.from({length: SIMILAR_PHOTOS_COUNT}, (_, i) => createDescriptionPhoto(i));
+const createDescriptionPhotos = () => Array.from({length: SIMILAR_PHOTOS_COUNT}, (_, i) => createDescriptionPhoto(i));
 
-export {descriptionPhotos};
+export {createDescriptionPhotos};

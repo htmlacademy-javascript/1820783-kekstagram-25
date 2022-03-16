@@ -1,3 +1,5 @@
-import {descriptionPhotos} from './data.js';
+import { createDescriptionPhotos } from './data.js';
+import { createSimilarPhotos } from './picture.js';
 
-window.console.log(descriptionPhotos);
+const photos =  createDescriptionPhotos();
+createSimilarPhotos(photos);
