@@ -1,12 +1,11 @@
-//import { createDescriptionPhotos } from './data.js';
-
-//const similarPhotos = createDescriptionPhotos(25);
 const template = document.querySelector('#picture').content;
 const itemTemplate = template.querySelector('.picture');
 
 const photoSection = document.querySelector('.pictures');
 
 const fragment = document.createDocumentFragment();
+
+// Создаем фотогалерею из миниатюр
 
 const createSimilarPhotos = ((photos) => {
   photos.forEach((photo) => {

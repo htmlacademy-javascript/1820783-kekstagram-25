@@ -17,4 +17,6 @@ checkLength('Привет! Как дела?', 140);
 
 const getRandomArrayElement = (elements) => elements[getRandomIntInclusive(0, elements.length - 1)];
 
-export {getRandomIntInclusive, getRandomArrayElement};
+const isEscapeKey = (evt) => evt.key === 'Escape';
+
+export {getRandomIntInclusive, getRandomArrayElement, isEscapeKey};
